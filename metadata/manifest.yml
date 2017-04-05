@@ -51,5 +51,6 @@ Endpoints:
     Options:
       health: true
 - Private-IP-Name:   INTERNAL_SERVICE_IP
+  Private-Port-Name: INTERNAL_SERVICE_PORT
   Private-Port-Name: 5544
-  Public-Port-Name:  INTERNAL_SERVICE_PORT
+  Public-Port-Name:  INTERNAL_SERVICE_PROXY_PORT
