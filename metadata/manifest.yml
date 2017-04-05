@@ -52,11 +52,10 @@ Endpoints:
     Backend: /health
     Options:
       health: true
-
 - Private-IP-Name: IP
   Private-Port-Name: MESSENGER_PORT
   Private-Port: 9000
   Public-Port-Name: MESSENGER_PROXY_PORT
   Mappings:
-  - Frontend:      "/webhook"
-  - Backend:       "/webhook"
+  - Frontend:      ""
+  - Backend:       ""
