@@ -41,8 +41,6 @@ Endpoints:
   Protocols:
   - http
   - ws
-  Options:
-    primary: true
   Mappings:
   - Frontend: ''
     Backend: ''
@@ -52,3 +50,6 @@ Endpoints:
     Backend: /health
     Options:
       health: true
+- Private-IP-Name:   INTERNAL_SERVICE_IP
+  Private-Port-Name: 5544
+  Public-Port-Name:  INTERNAL_SERVICE_PORT
