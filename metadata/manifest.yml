@@ -42,7 +42,7 @@ Endpoints:
   - http
   - ws
   Mappings:
-  - Frontend: ''
+  - Frontend: /8080
     Backend: ''
     Options:
       websocket: true
@@ -58,7 +58,7 @@ Endpoints:
   - http
   - ws
   Mappings:
-  - Frontend: ''
+  - Frontend: /8081
     Backend: ''
     Options:
       websocket: true
