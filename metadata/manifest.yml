@@ -35,16 +35,20 @@ Subscribes:
 
 Endpoints:
 - Private-IP-Name: IP
-  Private-Port-Name: MESSENGER_PORT
-  Private-Port: 8080 
-  Public-Port-Name: MESSENGER_PROXY_PORT
+  Private-Port-Name: PORT
+  Private-Port: 8080
+  Public-Port-Name: PROXY_PORT
+  Protocols:
+  - http
+  - ws
+  Options:
+    primary: true
   Mappings:
   - Frontend: ''
-  - Backend: '' 
-- Private-IP-Name: IP
-  Private-Port-Name: TELEGRAM_PORT
-  Private-Port: 8081 
-  Public-Port-Name: TELEGRAM_PROXY_PORT
-  Mappings:
-  - Frontend: ''
-  - Backend: '' 
+    Backend: ''
+    Options:
+      websocket: true
+  - Frontend: /health
+    Backend: /health
+    Options:
+      health: true
