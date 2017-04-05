@@ -50,7 +50,7 @@ Endpoints:
     Backend: /health
     Options:
       health: true
-- Private-IP-Name: HTTP_IP2
+- Private-IP-Name: HTTP_IP
   Private-Port-Name: WEB_PORT2
   Private-Port: 8081
   Public-Port-Name: WEB_PROXY_PORT2
