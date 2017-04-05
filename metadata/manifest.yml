@@ -50,7 +50,19 @@ Endpoints:
     Backend: /health
     Options:
       health: true
-- Private-IP-Name:   INTERNAL_SERVICE_IP
-  Private-Port-Name: INTERNAL_SERVICE_PORT
-  Private-Port: 5544
-  Public-Port-Name:  INTERNAL_SERVICE_PROXY_PORT
+- Private-IP-Name: HTTP_IP2
+  Private-Port-Name: WEB_PORT2
+  Private-Port: 8081
+  Public-Port-Name: WEB_PROXY_PORT2
+  Protocols:
+  - http
+  - ws
+  Mappings:
+  - Frontend: ''
+    Backend: ''
+    Options:
+      websocket: true
+  - Frontend: /health
+    Backend: /health
+    Options:
+      health: true
