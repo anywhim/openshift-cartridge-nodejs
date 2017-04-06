@@ -42,7 +42,7 @@ Endpoints:
   - http
   - ws
   Mappings:
-  - Frontend: /8080
+  - Frontend: ''
     Backend: ''
     Options:
       websocket: true
@@ -51,18 +51,26 @@ Endpoints:
     Options:
       health: true
 - Private-IP-Name: HTTP_IP
-  Private-Port-Name: WEB_PORT2
+  Private-Port-Name: MESSENGER_PORT
   Private-Port: 8081
-  Public-Port-Name: WEB_PROXY_PORT2
+  Public-Port-Name: MESSENGER_PROXY_PORT
   Protocols:
   - http
   - ws
   Mappings:
-  - Frontend: /8081
+  - Frontend: /facebook
     Backend: ''
     Options:
       websocket: true
-  - Frontend: /health
-    Backend: /health
+- Private-IP-Name: HTTP_IP
+  Private-Port-Name: TELEGRAM_PORT
+  Private-Port: 8082
+  Public-Port-Name: TELEGRAM_PROXY_PORT
+  Protocols:
+  - http
+  - ws
+  Mappings:
+  - Frontend: /telegram
+    Backend: ''
     Options:
-      health: true
+      websocket: true
